@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import WikiText from './WikiText';
 
 const Remembrance = ({ text, index, clippings, onImageClick, summary, gruesome }) => {
     return (
@@ -31,7 +32,7 @@ const Remembrance = ({ text, index, clippings, onImageClick, summary, gruesome }
                         "
                     </div>
                     <p className="text-lg leading-relaxed relative z-10 text-ink font-serif">
-                        {text}
+                        <WikiText text={text} />
                     </p>
 
                     {clippings && clippings.length > 0 && (
