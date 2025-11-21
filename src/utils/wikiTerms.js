@@ -69,6 +69,7 @@ export const wikiTerms = {
     'Corporal': 'Corporal',
 
     // Combat practices and tensions
+    'I told him that I don\'t salute officers': 'Fragging',
     'I don\'t salute officers': 'Fragging',
     'don\'t salute officers': 'Fragging',
 
