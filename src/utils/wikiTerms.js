@@ -68,6 +68,10 @@ export const wikiTerms = {
     'Lance Corporal': 'Lance corporal',
     'Corporal': 'Corporal',
 
+    // Combat practices and tensions
+    'I don\'t salute officers': 'Fragging',
+    'don\'t salute officers': 'Fragging',
+
     // Other
     'Demerol': 'Pethidine',
     'Kool-Aid': 'Kool-Aid',
