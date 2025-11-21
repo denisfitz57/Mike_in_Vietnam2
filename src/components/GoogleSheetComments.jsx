@@ -87,6 +87,21 @@ const GoogleSheetComments = ({ csvUrl, formUrl }) => {
             </div>
 
             <div className="space-y-6">
+                <div className="bg-white shadow border border-stone-200">
+                    {formUrl ? (
+                        <iframe
+                            title="Leave a Comment"
+                            src={formUrl}
+                            className="w-full h-[800px] border-0"
+                            loading="lazy"
+                        />
+                    ) : (
+                        <div className="text-center p-6 text-sm text-stone-500 italic">
+                            Add a Google Form URL to enable in-page comments.
+                        </div>
+                    )}
+                </div>
+
                 {comments.length === 0 ? (
                     <p className="text-center text-stone-500 italic">No comments yet. Be the first to share your thoughts.</p>
                 ) : (

@@ -8,7 +8,7 @@ const Remembrance = ({ text, index, clippings, onImageClick, summary, gruesome }
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
+            transition={{ duration: 0.3, delay: index * 0.1 }}
             className="bg-white p-8 shadow-lg border-l-4 border-sepia-dark relative overflow-hidden"
         >
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">

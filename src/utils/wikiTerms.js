@@ -72,6 +72,8 @@ export const wikiTerms = {
     'I told him that I don\'t salute officers': 'Fragging',
     'I don\'t salute officers': 'Fragging',
     'don\'t salute officers': 'Fragging',
+    'officers can be': 'Fragging',
+    'really dumb': 'Military courtesy',
 
     // Other
     'Demerol': 'Pethidine',
