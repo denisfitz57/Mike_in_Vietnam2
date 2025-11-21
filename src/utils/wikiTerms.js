@@ -67,6 +67,7 @@ export const wikiTerms = {
     'second lieutenant': 'Second lieutenant',
     'Lance Corporal': 'Lance corporal',
     'Corporal': 'Corporal',
+    'ace': 'Flying ace',
 
     // Combat practices and tensions
     'I told him that I don\'t salute officers': 'Fragging',
