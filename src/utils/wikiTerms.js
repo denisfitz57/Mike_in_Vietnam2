@@ -68,7 +68,9 @@ export const wikiTerms = {
     'Lance Corporal': 'Lance corporal',
     'Corporal': 'Corporal',
     'ace': 'Flying ace',
-
+    'our ship': 'Military Sealift Command',
+    'U.S.O.': 'United Service Organizations',
+    'USO': 'United Service Organizations',
     // Combat practices and tensions
     'I told him that I don\'t salute officers': 'Fragging',
     'I don\'t salute officers': 'Fragging',
