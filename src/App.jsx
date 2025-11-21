@@ -109,7 +109,7 @@ function App() {
                     <div className="sticky top-12 space-y-8">
                         <div className="bg-white p-6 shadow-lg border-t-4 border-sepia-dark">
                             <h3 className="font-serif text-xl mb-2 text-sepia-dark border-b border-stone-200 pb-2">Newspaper Clippings</h3>
-                            <p className="text-base text-stone-500 italic font-bold mb-4">Click on a summary to view the original clipping.</p>
+                            <p className="text-base text-stone-500 italic font-bold mb-4">Click on a summary to view the original clipping - click again to return.</p>
                             <ul className="space-y-4">
                                 {data.clippings.map((clip) => (
                                     <li key={clip.id} className="group cursor-pointer" onClick={() => handleImageClick(clip.path)}>
