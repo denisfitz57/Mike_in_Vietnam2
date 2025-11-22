@@ -19,7 +19,7 @@ const Remembrance = ({ text, index, clippings, onImageClick, summary, gruesome }
                     </p>
                     {gruesome && (
                         <div className="mt-4 flex justify-end">
-                            <span className="inline-block px-2 py-1 bg-red-100 text-red-800 text-xs font-bold uppercase tracking-widest border border-red-200 rounded-sm">
+                            <span className="inline-block px-3 py-2 md:px-2 md:py-1 bg-red-100 text-red-800 text-sm md:text-xs font-bold uppercase tracking-widest border border-red-200 rounded-sm shadow-sm">
                                 Warning: Graphic
                             </span>
                         </div>
@@ -38,9 +38,13 @@ const Remembrance = ({ text, index, clippings, onImageClick, summary, gruesome }
                     {clippings && clippings.length > 0 && (
                         <div className="mt-6 grid grid-cols-1 gap-4">
                             {clippings.map((clip) => (
-                                <div key={clip.id} className="bg-stone-200 p-2 rotate-1 hover:rotate-0 transition-transform duration-300 shadow-md cursor-pointer" onClick={() => onImageClick && onImageClick(clip.path)}>
+                                <div
+                                    key={clip.id}
+                                    className="bg-stone-200 p-3 md:p-2 rotate-1 hover:rotate-0 transition-transform duration-300 shadow-md cursor-pointer active:scale-95 touch-manipulation"
+                                    onClick={() => onImageClick && onImageClick(clip.path)}
+                                >
                                     <img src={clip.path} alt="Newspaper clipping" className="w-full h-auto filter sepia-[.3] contrast-125" />
-                                    <p className="text-xs mt-2 font-mono text-stone-600">{clip.ocr_text.substring(0, 100)}...</p>
+                                    <p className="text-sm md:text-xs mt-2 font-mono text-stone-600 leading-relaxed">{clip.ocr_text.substring(0, 100)}...</p>
                                 </div>
                             ))}
                         </div>

@@ -84,7 +84,14 @@ const WikiTooltip = ({ term, children }) => {
         e.preventDefault();
         e.stopPropagation();
 
-        // If we already have the URL, open it immediately
+        // Mobile/Touch handling:
+        // If tooltip is not visible, show it first.
+        if (!isHovered) {
+            setIsHovered(true);
+            return;
+        }
+
+        // If it IS visible (or on second click), open the link.
         if (wikiData?.url) {
             window.open(wikiData.url, '_blank', 'noopener,noreferrer');
         } else {

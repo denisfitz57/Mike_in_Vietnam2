@@ -52,11 +52,7 @@ function App() {
 
     const handleImageClick = (imagePath) => {
         setSelectedImage(resolveAssetPath(imagePath));
-    };
-
-    const closeLightbox = () => {
-        setSelectedImage(null);
-    };
+    }
 
     if (!data) {
         return (
@@ -74,10 +70,23 @@ function App() {
                     className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center cursor-pointer animate-in fade-in duration-200"
                     onClick={closeLightbox}
                 >
+                    <button
+                        className="absolute top-4 right-4 text-white/70 hover:text-white p-2 rounded-full bg-black/20 hover:bg-black/40 transition-colors z-50"
+                        onClick={(e) => {
+                            e.stopPropagation();
+                            closeLightbox();
+                        }}
+                        aria-label="Close lightbox"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                    </button>
                     <img
                         src={selectedImage}
                         alt="Magnified view"
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-contain p-4 md:p-8"
                     />
                 </div>
             )}
@@ -106,8 +115,11 @@ function App() {
                 </div>
 
                 <aside className="hidden lg:block lg:col-span-1 relative">
-                    <div className="sticky top-12 space-y-8">
-                        <div className="bg-white p-6 shadow-lg border-t-4 border-sepia-dark">
+                    <div className="sticky top-12">
+                        <div
+                            className="bg-white p-6 shadow-lg border-t-4 border-sepia-dark overflow-y-auto no-scrollbar"
+                            style={{ maxHeight: 'calc(100vh - 6rem)' }}
+                        >
                             <h3 className="font-serif text-xl mb-2 text-sepia-dark border-b border-stone-200 pb-2">Newspaper Clippings</h3>
                             <p className="text-base text-stone-500 italic font-bold mb-4">Click on a summary to view the original clipping - click again to return.</p>
                             <ul className="space-y-4">
@@ -120,6 +132,11 @@ function App() {
                                     </li>
                                 ))}
                             </ul>
+                            <div className="mt-8 text-center opacity-60">
+                                <div className="inline-block w-8 h-px bg-stone-400 mb-1"></div>
+                                <p className="text-xs text-stone-500 italic font-serif">End of Clippings</p>
+                                <div className="inline-block w-8 h-px bg-stone-400 mt-1"></div>
+                            </div>
                         </div>
                     </div>
                 </aside>
