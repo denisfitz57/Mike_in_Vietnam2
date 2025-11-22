@@ -54,6 +54,10 @@ function App() {
         setSelectedImage(resolveAssetPath(imagePath));
     }
 
+    const closeLightbox = () => {
+        setSelectedImage(null);
+    };
+
     if (!data) {
         return (
             <div className="min-h-screen bg-paper flex items-center justify-center">
@@ -111,7 +115,7 @@ function App() {
                         />
                     ))}
 
-                    <Comments />
+
                 </div>
 
                 <aside className="hidden lg:block lg:col-span-1 relative">
@@ -152,6 +156,10 @@ function App() {
                             </div>
                         ))}
                     </div>
+                </div>
+
+                <div className="lg:col-span-2">
+                    <Comments />
                 </div>
             </main>
 
