@@ -98,7 +98,11 @@ function App() {
             <header className="py-16 text-center bg-sepia-dark text-paper shadow-xl relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20 bg-[url('https://www.transparenttextures.com/patterns/dark-leather.png')]"></div>
                 <h1 className="text-5xl md:text-7xl font-bold mb-4 relative z-10 tracking-wider">Mike Fitzpatrick in Vietnam</h1>
-                <p className="text-xl md:text-2xl italic opacity-90 relative z-10 font-light">Newspaper clippings and remembrances from 2003 for fellow Air Guardsmen heading to the Middle East</p>
+                <p className="text-xl md:text-2xl italic opacity-90 relative z-10 font-light">Newspaper clippings and thoughts from 2003</p>
+                <p className="text-xl md:text-2xl italic opacity-90 relative z-10 font-light">Reflecting on fellow Air Guardsmen heading to the Middle East</p>
+                <p className="text-xl md:text-2xl italic opacity-90 relative z-10 font-light">Content Mike Fitzpatrick and Reporters to the <a href="https://weepingwaterne.advantage-preservation.com/" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Weeping Water Republican.</a></p>
+                <p className="text-xl md:text-2xl italic opacity-90 relative z-10 font-light">Summaries, link determination and most programming courtesy Google AI.</p>
+                <p className="text-xl md:text-2xl italic opacity-90 relative z-10 font-light"><a href="https://en.wikipedia.org/wiki/Entry-level_job" target="_blank" rel="noopener noreferrer" className="underline hover:text-white transition-colors">Grunt work</a> by Denis Fitzpatrick.</p>
             </header>
 
             <main className="max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-12">
